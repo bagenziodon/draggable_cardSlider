@@ -48,11 +48,15 @@ const infiniteScroll = () => {
     if(carousel.scrollLeft === 0){
         // if carousel is at the beginning, scroll to the end
         // console.log("You have reached to the left end");
+        carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
     }else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
         // if carousel is at the end, scroll to the beginning
         // console.log("You have reached to the right end");
+        carousel.classList.add("no-transition");
         carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
     }
 }
 carousel.addEventListener("mousedown", dragStart);

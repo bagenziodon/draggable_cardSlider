@@ -65,6 +65,9 @@ body{
     scroll-snap-type: none;
     scroll-behavior: auto;
 }
+.carousel.no-transition{
+    scroll-behavior: auto;
+}
 .carousel.dragging .card{
     cursor: grab;
     user-select: none;
